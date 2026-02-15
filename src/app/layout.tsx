@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ToasterProvider from "@/components/providers/ToasterProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,6 +66,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <ToasterProvider />
+        <Analytics />
       </body>
     </html>
   );
