@@ -16,7 +16,7 @@ export default function InsuranceAccepted(){
     return(
         <>
             <BlueSection>
-                <h1 className="text-4xl font-serif">Insurance Accepted</h1>
+                <h1 className="text-center text-4xl font-serif">Insurance Accepted</h1>
             </BlueSection>
             
              <div className="p-5 space-y-4 font-questerial" style={{ color: "var(--neutral-700)", lineHeight: 1.8 }}>

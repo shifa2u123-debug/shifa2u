@@ -255,7 +255,7 @@ export default function Header() {
                 </div>
             </header>
             {/* Spacer for fixed header on non-home pages */}
-            {pathname !== "/" && <div className="h-[102px]" />}
+            {pathname !== "/" && <div style={{ height: '102px' }} />}
         </>
     );
 }

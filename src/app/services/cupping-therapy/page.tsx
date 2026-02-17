@@ -12,9 +12,12 @@ const images = [
     "https://res.cloudinary.com/dyipiwfj8/image/upload/v1771175942/services/cupping-therapy/thumb_330582750.jpg",
 ];
 
+import CuppingPromoModal from "./CuppingPromoModal";
+
 export default function CuppingTherapy() {
     return (
         <>
+            <CuppingPromoModal />
             <BlueSection>
 
                 <h1 className="text-4xl font-serif">Cupping Therapy</h1>
@@ -93,7 +96,7 @@ export default function CuppingTherapy() {
 
                         <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-medium">
                             To learn more services, benefits of cupping therapy and for more information, <a
-                                href="https://drive.google.com/file/d/1xJC9texLYTM-N35veWd4yLHVeixrs1TG/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/15gm7NPNtE_4O-qNgkub5KxjroThDaiJQ/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-primary-600 font-bold hover:text-primary-800 hover:underline decoration-2 underline-offset-4 transition-colors"

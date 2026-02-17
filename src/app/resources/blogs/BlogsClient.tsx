@@ -3,19 +3,19 @@
 import { FileText, Download } from 'lucide-react';
 
 const educationMaterials = [
-    { name: "Acid Reflux Disease", file: "Acid_Reflux_Disease.pdf" },
-    { name: "Chronic Pain Syndrome", file: "Chronic_Pain_Syndrome.pdf" },
-    { name: "COPD", file: "COPD.pdf" },
-    { name: "Diabetes", file: "Diabetes.pdf" },
-    { name: "Hyperlipidemia", file: "Hyperlipidemia.pdf" },
-    { name: "Hypertension", file: "Hypertension.pdf" },
-    { name: "Osteoarthritis", file: "Osteoarthritis.pdf" },
-    { name: "Osteoporosis", file: "Osteoporosis.pdf" },
-    { name: "Parkinson's Disease", file: "Parkinson’s_Disease.pdf" },
-    { name: "Radiculopathy", file: "Radiculopathy.pdf" },
-    { name: "Spondylosis", file: "Spondylosis.pdf" },
-    { name: "Urinary Incontinence", file: "Urinary_Incontinence.pdf" },
-    { name: "Home Health Care 101: FAQs", file: "Home_Health_Care_101_FAQs.pdf" },
+    { name: "Acid Reflux Disease", file: "https://drive.google.com/file/d/1J3uF1SE2yEAnNMiu6EFkTMN_ZklRWE0G/view?usp=drive_link" },
+    { name: "Chronic Pain Syndrome", file: "https://drive.google.com/file/d/1VUiEXj3t7CepfaJ_KSo-8bjumrQdnFdB/view?usp=drive_link" },
+    { name: "COPD", file: "https://drive.google.com/file/d/1MmtGwRHW06AOenWa5v8zR_ilGTCTvZh0/view?usp=drive_link" },
+    { name: "Diabetes", file: "https://drive.google.com/file/d/16NAylilTgtIOFlGjD55DCLSv9GIs-KoX/view?usp=drive_link" },
+    { name: "Hyperlipidemia", file: "https://drive.google.com/file/d/17CoXO403eBnVnc0_BF8dx3iydElcLFGe/view?usp=drive_link" },
+    { name: "Hypertension", file: "https://drive.google.com/file/d/17CoXO403eBnVnc0_BF8dx3iydElcLFGe/view?usp=drive_link" },
+    { name: "Osteoarthritis", file: "https://drive.google.com/file/d/1P8ZYZV_fUADmDILKlVikK09DS7DSiurF/view?usp=drive_link" },
+    { name: "Osteoporosis", file: "https://drive.google.com/file/d/1EPqqY66qxmKN9jo0HCm7b9OxPhZ2YLDf/view?usp=sharing" },
+    { name: "Parkinson's Disease", file: "https://drive.google.com/file/d/17CoXO403eBnVnc0_BF8dx3iydElcLFGe/view?usp=drive_link" },
+    { name: "Radiculopathy", file: "https://drive.google.com/file/d/1nLBFq4bd4ZmbnCzpEJvR6tYqtDvzCpbR/view?usp=sharing" },
+    { name: "Spondylosis", file: "https://drive.google.com/file/d/1nLBFq4bd4ZmbnCzpEJvR6tYqtDvzCpbR/view?usp=sharing" },
+    { name: "Urinary Incontinence", file: "https://drive.google.com/file/d/17CoXO403eBnVnc0_BF8dx3iydElcLFGe/view?usp=drive_link" },
+    { name: "Home Health Care 101: FAQs", file: "https://drive.google.com/file/d/17CoXO403eBnVnc0_BF8dx3iydElcLFGe/view?usp=drive_link" },
 ];
 
 export default function BlogsClient() {
@@ -25,7 +25,7 @@ export default function BlogsClient() {
                 <div
                     key={material.name}
                     className="card p-5 flex items-center justify-between gap-4 cursor-pointer hover:shadow-lg transition-shadow duration-300 rounded-xl border border-neutral-100 bg-white"
-                    onClick={() => window.open(`/blogsPdfs/${material.file}`, '_blank')}
+                    onClick={() => window.open(`${material.file}`, '_blank')}
                 >
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
@@ -36,7 +36,7 @@ export default function BlogsClient() {
                         </span>
                     </div>
                     <a
-                        href={`/blogsPdfs/${material.file}`}
+                        href={`${material.file}`}
                         download
                         onClick={(e) => {
                             e.stopPropagation();
