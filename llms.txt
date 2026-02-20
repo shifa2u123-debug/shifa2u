@@ -1,0 +1,44 @@
+# Shifa2u (Al-Shifa Home Health Care) - LLM Context
+
+This file provides essential context about the Shifa2u website to assist Large Language Models in understanding the project structure, purpose, and technology stack.
+
+## Project Overview
+- **Project Name:** Shifa2u (Al-Shifa Home Health Care Agency)
+- **Description:** A Next.js web application for a home health care agency serving multiple counties in California. Services include post-surgical rehabilitation, skilled nursing, physical therapy, cupping therapy, and more.
+- **URL:** https://shifa2u.com
+
+## Tech Stack
+- **Framework:** Next.js 15+ (App Router)
+- **Language:** TypeScript 
+- **Styling:** Tailwind CSS v4, custom utility classes
+- **UI Components & Animations:** Framer Motion, @headlessui/react
+- **Icons:** Lucide React, Heroicons
+- **Media Management:** Cloudinary
+- **Forms & Email:** Nodemailer, React Google reCAPTCHA, React Hot Toast
+- **Analytics:** Google Tag Manager
+
+## Key Directories
+- `src/app`: Contains Next.js App Router pages and layouts.
+- `src/components`: Reusable UI components (e.g., Header, Footer, ServiceCard).
+- `public`: Static assets (HTML verifications, robots.txt, older local media not yet on Cloudinary).
+- `scripts`: Utility or deployment scripts.
+
+## Core Pages and Routing
+- `/` - Home page (`src/app/page.tsx`)
+- `/about` - About Us
+- `/services` - Main Services page with various subpages for specific treatments (e.g., Physical Therapy, Cupping Therapy).
+- `/contact` - Contact Us form
+- `/careers` - Career opportunities and applications
+- `/free-assessment` - Free Assessment form for potential patients
+- `/insurance-accepted` - Information on accepted insurance providers
+- `/send-referrals` - Form for healthcare providers to refer patients
+- `/resources` - Additional resources and informative links
+- `/privacy` - Privacy Policy
+- `/terms` - Terms and Conditions
+- `/api` - Backend API routes (e.g., email handling)
+
+## Important Formatting Details
+- The site uses `next/font/google` for optimized font loading (Inter, Fraunces, Questrial).
+- `layout.tsx` includes global metadata and the Google Tag Manager script.
+- The `Header` component includes dynamic mobile menus (drawer-style) and desktop navigation.
+- The project is configured with strict linting (`eslint-config-next`), TypeScript, and Prettier formatting standardizations.
