@@ -139,7 +139,6 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="container-custom py-10">
-        <ScrollAnimation direction="up">
           <div className="text-center mb-12">
             <h2 className="section-title text-4xl lg:text-6xl">Services We Offer</h2>
             <p className="text-gray-500 text-xl section-subtitle">
@@ -152,7 +151,7 @@ export default function Home() {
               <ServiceCard key={index} imageSrc={service.src} title={service.title} link={service.link} />
             ))}
           </div>
-        </ScrollAnimation>
+        
       </section>
 
       <BlueLine />

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 interface ServiceCardProps {
     imageSrc: string;
@@ -8,10 +11,21 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ imageSrc, title, link }: ServiceCardProps) => {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(true);
+        setTimeout(() => {
+            setIsClicked(false);
+        }, 2000);
+    };
+
     return (
         <Link
             href={link}
+            onClick={handleClick}
             className="group relative flex flex-col items-center"
+
             style={{ paddingBottom: "1.25rem" }}
         >
             {/* Card Body */}
@@ -34,9 +48,11 @@ const ServiceCard = ({ imageSrc, title, link }: ServiceCardProps) => {
 
             {/* Overlapping Label */}
             <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] rounded-[1.25rem] bg-white px-4 py-3 text-center shadow-md transition-all duration-300 group-hover:bg-primary-600 group-hover:shadow-lg"
+                className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] rounded-[1.25rem] px-4 py-3 text-center transition-all duration-300 group-hover:bg-primary-600 group-hover:shadow-lg ${isClicked ? "bg-primary-600 shadow-lg" : "bg-white shadow-md"
+                    }`}
             >
-                <h3 className="font-questerial text-lg font-medium text-neutral-800 transition-colors duration-300 group-hover:text-white sm:text-lg">
+                <h3 className={`font-questerial text-lg font-medium transition-colors duration-300 group-hover:text-white sm:text-lg ${isClicked ? "text-white" : "text-neutral-800"
+                    }`}>
                     {title}
                 </h3>
             </div>

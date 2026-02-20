@@ -14,7 +14,7 @@ export default function PostSurgicalRehabilation() {
     return (
         <>
             <BlueSection>
-                <h1 className="text-4xl font-serif">Post Surgical Rehabilitation</h1>
+                <h1 className="text-center text-4xl font-serif">Post Surgical Rehabilitation</h1>
             </BlueSection>
 
             <section className="container-custom py-12">
